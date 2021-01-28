@@ -1,0 +1,13 @@
+.card-container {
+  padding: 2em;
+  margin: 1em;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.4);
+  border-radius: 1em;
+  background-color: lightblue;
+
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+}
