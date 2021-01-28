@@ -1,0 +1,10 @@
+<div class="form-container">
+  <mat-form-field appearance="outline">
+    <mat-label>Filter By Name</mat-label>
+    <input autocomplete="off" type="text" matInput placeholder="Name">
+  </mat-form-field>
+</div>
+
+<div class="movies-container">
+  <app-movies-table [tableData]="movies"></app-movies-table>
+</div>

@@ -1,0 +1,17 @@
+<table cdk-table [dataSource]="dataSource">
+  <ng-container *ngFor="let column of displayedColumnsWithoutPoster" [cdkColumnDef]="column">
+    <th cdk-header-cell *cdkHeaderCellDef>{{ column }}</th>
+    <td cdk-cell *cdkCellDef="let element">{{ element[column] }}</td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="poster">
+    <th cdk-header-cell *cdkHeaderCellDef> poster </th>
+    <td class="poster-cell" cdk-cell *cdkCellDef="let element">
+      <img [attr.src]="element.poster">  
+    </td>
+  </ng-container>
+
+
+  <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+</table>

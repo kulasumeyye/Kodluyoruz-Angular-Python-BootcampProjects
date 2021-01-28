@@ -1,0 +1,19 @@
+<mat-drawer-container class="drawer-container" hasBackdrop="true">
+  <mat-drawer #drawer mode="over">
+    <mat-nav-list class="nav-list">
+      <ng-container *ngFor="let nav of navItems">
+        <a class="nav-list-item" (click)="drawer.close()" mat-list-item routerLink="nav.routerLink">{{nav.name}}</a>
+      </ng-container>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Homework 2</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
